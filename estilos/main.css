@@ -1,0 +1,31 @@
+body{
+    background: #f0f0f0;
+
+}
+
+:root{ /*Muito parecido com o sass, inves de ir mudando a cor de tag por tag mudamos de todas de uma vez so */
+    --title-color: #30165f;
+    --primary-color: #34cd34;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+a { /*Aqui estamos dizendo que todas as tags <a> serao removidas a linha de baixo */
+    text-decoration: none; /*Tiramos o risco que fica de baixo da tag de link */
+}
+
+h1,h2,h3,h4,h5{ /*Aqui estamos dizendo que queremos que todos os hs tenham essa cor */
+    color: var(--title-color);  /* seria a variavle que criamos ali em cima apenas mudando la e muda de todos que tem essa cor */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Assim limitamos o limite do tamanho das bordas do box para que o padding não aumente o tamanho da caixa*/
+
+}
+
+
+

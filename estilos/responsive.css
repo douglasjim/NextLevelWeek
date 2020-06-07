@@ -1,0 +1,45 @@
+/*Aqui esta as regras para o responsivo */
+
+
+
+/*Alem disso, isso so funciona quando usamos a tag meta la no head com a descricao de initial-escale */
+@media(max-width: 900px){ /*Estamos aplicando regras para quando o tamanho da tela for menor que 900px */
+    #page-home{ /*Pegando o id page-home, todas as tags que estão aqui dentro sera alterada */
+        background-position-x: 70vw; /*Lá em cima criamos um background e inserimos a imagem aqui estamos dizendo que essa imagem deve alterar seu tamanho quando a tela estiver menor que 900px, no caso sumir da tela */
+    }
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a{
+        position: absolute; /*Deixa a tag a em cima de todas as tags */
+        bottom: 70px;
+        left: 50%; 
+        transform: translateX(-50%);/* Aqui estamos mexendo no eixo X, assim conseguindo centralizar o conteudo*/
+
+    }
+    #page-home main{
+        align-items: center;
+    }
+
+}
+/*
+@media(max-width: 475px){ /*Quando a tela chegar no maximo de 475px ira realizar algo que iremos colcoar aqui dentro */
+    /* #page-home{ 
+        color: red;  
+    }
+} */
+
+@media (max-width: 899px){
+    #page-home{
+        color: black;
+        background-position: 700px !important; /*Assim a foto irá sumir  */
+    }
+}
+
+@media (max-height: 650px){
+    #page-home{
+        background-position-y:  100px !important; /*Aqui estamos dizendo que quando deixar na altura de 650px a imagem deve travar no lugar onde escolhemos que ele fixe usando o px */
+        /*Entao quando a tela for chegar na altura de 650px a imagem irá travar */
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE hmtl>
+<html lang="pt_br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estilos/main.css">
+        <link rel="stylesheet" href="estilos/create-point.css">
+        <link rel="stylesheet" href="estilos/responsive.css">
+        <title>Criar um ponto de coleta</title>
+    
+
+    </head>
+
+
+
+    <body>
+
+        <div id="page-create-point">
+
+                <header> <!-- Devemos colocar essa tag para o header assim fica sematicamente correto e para os robos das pesquisas do google encontre mais rapido e facil nosso site -->
+                    <img src="/extras-aula-1/icones/logo.svg" alt="Logomarca">
+                    <a href="index.html">
+                        <span> </span>
+                        <p>Voltar para o home</p>
+                    </a>
+                </header>
+
+                <form action=" ">
+
+                    <h1> Cadastro do ponto de coleta </h1>
+
+                    <fieldset> <!-- Essa tag server para deixar sematicamente correto novamente para que o search do google possa encontrar o site mais facil / Colecao de campos, de conteudo geralmente usado quando temos um quadrado com varios conteudos um pertinho do outro ou em caso de formulario conforme dos itens a baixo-->
+                        <legend> <!-- essa tag tbm é obrigado a colocar dentro do fieldset-->
+                            <h2>Dados da entidade</h2> <!-- Olhando no html esse nome fica entre as linhas que forma uma caixa , Muito top !-->
+                        </legend>
+
+                        <div class="field"><!-- o for usamos para conectar o label com o input -->
+                            <label for="name">Nome da entidade </label>
+                            <input type="text" name="name" required>
+                        </div>
+                        
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="address">Endereco</label>
+                                <input type="text" name="adress" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="andress2">Numero/Complemento</label>
+                                <input type="number" name="andress2" required> <!--Colocando esse tipo number estamos dizendo que esse campo so aceita numero , se tentar colcoar letra nao funciona-->
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <div class="field">
+                                <label for="andress2">Estado</label>
+                                <select name="uf" id="" required>
+                                    <option value="">Selecione o Estado</option>
+                                </select>
+
+                                <input type="hidden" name="state" required> <!-- Ainda não entendi mas, pelo oque entendi ele mostra o valor no html -->
+                                
+                            </div>
+
+                            <div class="field">
+                                <label for="andress2">Cidade</label>
+                                <select name="city" id="" disabled required>
+                                    <option value="">Selecione primeiro o Estado</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+
+
+
+
+
+
+
+
+                    <fieldset>
+                        <legend>
+                            <h2>Itens de coleta</h2>
+
+                        </legend>
+
+                        <div class="items-grid">
+                            <li data-id="1" class="selected"> <!-- Seria meio que uma tag especial que criamos para identificar essa LI  -->
+                                <img src="/extras-aula-1/icones/lampadas.svg " alt="Lampadas">
+                                <span>Lampadas</span>
+                            </li>
+
+                            <li data-id="2"> <!-- Seria meio que uma tag especial que criamos para identificar essa LI  -->
+                                <img src="/extras-aula-1/icones/baterias.svg " alt="Pilhas e Baterias">
+                                <span>Pilhas e Baterias</span>
+                            </li>
+
+                            <li data-id="3"> <!-- Seria meio que uma tag especial que criamos para identificar essa LI  -->
+                                <img src="/extras-aula-1/icones/papeis-papelao.svg " alt="Papeis e Papelão">
+                                <span>Papeis e Papelão</span>
+                            </li>
+
+                            <li data-id="4"> <!-- Seria meio que uma tag especial que criamos para identificar essa LI  -->
+                                <img src="/extras-aula-1/icones/eletronicos.svg " alt="Residuos Eletronicos">
+                                <span>Residuos Eletronicos</span>
+                            </li>
+
+                            <li data-id="5"> <!-- Seria meio que uma tag especial que criamos para identificar essa LI  -->
+                                <img src="/extras-aula-1/icones/organicos.svg" alt="Residuos Organicos">
+                                <span>Residuos Organicos</span>
+                            </li>
+
+                            <li data-id="6"> <!-- Seria meio que uma tag especial que criamos para identificar essa LI  -->
+                                <img src="/extras-aula-1/icones/oleo.svg " alt="Oleo de Cozinha">
+                                <span>Oleo de Cozinha</span>
+                            </li>
+                            
+                        </div>
+
+                        <input type="hidden" name="items">
+
+                        
+
+                    </fieldset>
+
+
+
+                    <button type="submit">Cadastrar ponto de coleta </button>
+                
+                </form>
+
+        </div>
+
+        <script src="/scripts/create-point.js"> </script>
+    </body>
+
+    <!-- comentario em html -->
+
+</html>

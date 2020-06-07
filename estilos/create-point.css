@@ -1,0 +1,189 @@
+#page-create-point{
+    width: 90%; /*Aqui estamos mexendo no tamanho da caixa no qual esta as tags, por isso que quando aumentamos ou diminuimos os conteudos apos a tag space-between ficam proximos ou longe */
+    max-width: 1100px; /*Quando a altura dele chega no maximo de 1100 px ele não irá aumentar mais o tamanho */
+
+    margin: 0 auto; /*As alturas tera margem 0 e as larguras sera preenchidas automaticas */
+
+}
+
+#page-create-point header{
+    display: flex; /*Serve para deixar o conteudo um do lado do outro */
+    justify-content: space-between; /*Vai jogar um conteudo para um lado e o outro para outro lado */
+    
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+#page-create-point header a{
+    color: var(--title-color); /*Essa variavel so funciona porque ela esta dentro de outro arquivo css e esse arquivo css esta sendo importado la no html da pagina logo este arquivo css consegue buscar a variavel */
+    /*Como se fosse variavel Global */
+    font-weight: bold;
+    display: flex; /*Com essa tag de FATO que deixa as tags uma do lado da outra */
+    align-items: center;
+
+}
+
+#page-create-point header a span{
+    background-image: url("../extras-aula-1/icones/arrow-left.svg");
+    
+    /*width, height e display: flex São necessarios para que o icone possa aparecer na tela !! */
+    width: 20px; /*Definir a largura do icone */
+    height: 24px; /*Definir a altura do icone */
+    display: flex; /*Só assim para que o icone possa aparecer porque sem essa tag o icone fica escondido, com essa tag ele aparecerá do lado da tag vizinha dele que no caso é o <a> */
+    margin-right: 16px; /*Assim conseguimos deixar o icone um pouco mais distante da frase */
+    
+    /* stroke="#34CB79" = Isso é oque fez mudar de cor o icone, entao todo icone em svg tem uma sequencia de caracteres parecida com essa, e nessa sequencia de caracteres é a cor do icone em svg */
+
+}
+
+form{
+    max-width: 730px;
+    
+    background-color: white;
+    padding: 64px; /*Manter distancia entre o conteudo e toda a caixa ao redor */
+    border-radius: 8px;
+    margin-top: 30px;
+
+    
+}
+
+form h1{
+    text-align: center;
+    font-size: 36px;
+
+}
+
+
+form fieldset{
+    margin-top: 64px;
+    border: 0; /*Aqui conseugimos tirar toda a borda que tem por padrao da tag fieldset */
+
+
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 24px;
+
+}
+
+form .field{
+    display: flex; /*Aqui nao muda nada ate porque eles ja estao um do lado do outro */
+    flex-direction: column; /*e aqui que vem a magica, assim deixando o input debaixo do label */
+    /*Alem disso seguir uma regra que os input e label deve seguir a regra de colunas, preencher os campos como coluna  como se fosse o bootstrap*/
+
+    margin-bottom: 24px;
+    flex: 1; /*Assim o conteudo irá pegar todo o espaco vazio que tem dentro da div que ele foi colocado */
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input, form select{ /*Usando a virgula estamos dizendo que todo o conteudo sera aplicado para mais de uma tag so colocar a virgula e dizer qual a outra tag vai ter o mesmo comportamento */
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px; /*Assim conseguimos aumentar o tamanho do input */
+    font-size: 16px; /*COm isso iremos deixar os caracteres que iremos inserir maiores */
+
+    outline: none; /*Ja sabemos que quando clicamos no input ao redor dele fica umas linhas que indica que ele foi selecionado, usando essa tag iremos tirar-lo */
+    border-radius: 8px;
+
+}
+
+form select{ /*Usando isso conseguimos tirar uma setinha que aparece , porque por padrao dos navegadores essa seta aparece */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+
+}
+
+form .field-group .field + .field{ /*com essa linha usando esse + field estamos dizendo que queremos pegar o segundo vendo que esta dentro desse field-group para fazer com oque eles mantenham distancia um do outro */
+    margin-left: 24px; /*Com essas tags conseguimos fazer com que os fields matenham distancia um do outro */
+    
+
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+
+    transition: 400ms; /*Isso serve para que o botao apareca devegar e mais bonito na tela e depedendo do tempo irá aparecer devagar ou rapido */
+
+}
+
+form button:hover{
+    background-color: #2fb86e;
+
+
+}
+
+
+.items-grid{
+    display: grid; /*Aqui iremos organizar os lis em colunas porem para que seja feito temos que adicionar as tags grid-template-columns; */
+    /* grid-template-columns: 200px 200px 200px; // assim conseguimos modificar o tamanho das colunas , aqui sao 3 colunas */
+
+    grid-template-columns: 1fr 1fr 1fr; /*Aqui estamos dizendo que queremos 3 colunas sobre com 3 items, alem disso ele irá sevirar para organizar os tamanhos inves de usar os pxs */
+    gap: 16px; /*Com essa propriedade conseguimos separa todos os lis com tamanhos iguais um do lado do outro que dahora !! */
+
+}
+
+.items-grid li{
+    list-style: none; /*Serve para tirar as bolinhas dos lis que vem por padrao */
+    background-color: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    height: 180px;
+    border-radius: 8px;
+    /*Cada um desses pxs na propriedade de baixo é um lado dos quadrados que esta sendo alterado de tamanho entre o conteudo e as bordas */
+    padding: 32px 24px 16px; /*Confome vimos mais cedo aqui estamos criando o espacamento entre o conteudo e as bordas */
+    display: flex;
+    /*flex-direction: column serve para mudar o fluxo inves de um do lado do outro apos usar o flex usamos isso para deixar um de baixo do outro */
+    flex-direction: column; /*Revendo... Com essa propriedade conseguimos jogar as palavras que estavam em cima dos icones para baixo, mas isso so é feito pela propriedade flex */
+    align-items: center;
+    justify-content: space-between; /*A palavra e o icone manteve distancia ao contrario porque mudamos o fluxo de inves de um do lado do outro colocamos um em cima do outro logo o between irá funciona porem para manter a distancia da palavra com o icone de cima pra baixo */
+    text-align: center;
+    cursor: pointer; /*Para mudar o cursor inves de seta vira uma maozinha */
+    
+}
+
+.items-grid li span{
+
+    /*Com essas tres propriedades conseguimos colocar a descricao bem no meio */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /*--- */
+
+    color: var(--title-color);
+    margin-top: 12px;
+
+}
+
+/*PRESTAR ATENCAO! temos que colcoar o li.selected assim conseguimos pegar a classe que esta dentro da div li */
+/*PRESTAR ATENCAO!2 se a gente colocar o li .selected separado ele irá procurar uma classe select em outra tag dentro da tag li */
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+
+}
+
+.items-grid img,.items-grid span{ /*Aqui estamos definindo que a tag img e span não sera mais clicavel */
+    pointer-events: none;
+}

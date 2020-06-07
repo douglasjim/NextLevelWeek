@@ -1,0 +1,111 @@
+
+
+
+#page-home header a{
+    display: flex; /*Assim estamos dizendo que os elementos iram ficar um do lado do outro, as tags vao ficar um do lado do outro */
+    color: #322153;
+    font-weight: 700;
+
+}
+
+#page-home header a span{ /* Mexendo no icone do login */
+    margin-right: 16px;
+    display: flex;
+    background-image: url('../extras-aula-1/icones/log-in.svg');
+    width: 20px;
+    height: 20px;
+    color: var(--title-color);
+
+}
+
+#page-home header{ /*Por fora ;e uma caixa e flex deixa as tags uma do lado da outra */
+    margin-top: 40px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /*between espaco entre eles */
+    
+
+}
+
+#page-home .content{
+    width: 90%;
+    max-width: 1100px; /* caso o conteudo for menor que esse valor em px ele irá se adptar na tela conforme for modificando o tamanho */
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* margin-rigt : auto e margin-left: auto usando isso no container iremos deixar todo o container centralizado e respostivo */
+/*sequencia do margin 0 - right 0 - botom 0 - top  0 - left ,  */
+/*100vh para altura / 35vw para largura */
+
+#page-home{
+    height: 115vh; /* defenimos a alura da imagem */  
+    background: url('../extras-aula-1/icones/home-background.svg') no-repeat; /*Aqui serve para deixar a imagem no fundo e alem disso para nao repetir, esses dois pontos serve para sair da pasta que estamos e meio que comecar do comeco para ir nos caminhos em busca do arquivo que queremos */
+    background-position: 35vw bottom; /*Serve para bexer na largura da imagem */
+}
+#page-home main{
+    max-width: 560px; /* Limitando o tamanho maximo da caixa no qual esta todo o conteudo dentro, ele só irá diminuir */
+    height: 500px;
+    flex: 1;
+    display: flex; /*estamos dizendo que a esse bloco sera apresentado um do lado do outro com outro bloco que estiver junto com ele */
+    flex-direction: column; /*E aqui estamos explicando que queremos inves de um do lado do outro queremos que eles estejam um de baixo do outro */
+    justify-content: center;
+
+}
+
+#page-home main h1{
+    font-size: 53px;
+}
+
+
+#page-home main p{
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a{
+    width: 100%; /*A largura dele dentro do quadrado que criamos ele irá pegar 100% */
+    max-width: 360px; /* E aqui defenimos o tamanho dele que no caso tamanho maximo de 360px  */
+    background: var(--primary-color);
+    height: 72px;
+    
+    display: flex;
+    align-items: center; /*Pega todos os itens que estao dentro dessa tag e alinha no centro */
+    border-radius: 8px; /*Como ja conhecemos para arredondar as bordas do botao */
+
+    margin-top: 40px;
+    transition: 400ms;
+    
+}
+
+#page-home main a:hover{ /*Quando o mouse passar em cima do botao vai acontecer tudo oque estiver dentro dessas chaves */
+    background-color: #2fb86e;
+}
+
+#page-home main a span{ /*Temos um quadrado um pouco mais escuro lá é a tag span */
+    width: 72px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.08);
+
+    border-top-left-radius: 8px; /*Mexendo apenas nas bordas da tag span , onde esta o pequeno quadrado escuro */
+    border-bottom-left-radius: 8px;
+
+    display: flex; /*O icone estava escondido temos que inserir esse flex para que ele possa aparecer */
+    align-items: center; /* alinhando por coluna entao ele ira ficar no meio na vertical*/
+    justify-content: center; /*Aqui seria a mesma coisa so que na horizontal */
+}
+
+#page-home main a span::after{
+    content: ""; /*Aqui estamos dizendo que iremos colocar um conteudo */
+    background-image: url("../extras-aula-1/icones/search.svg"); /*Inserindo o icone apenas na quele quadradinho escuro */
+    width: 20px; /*Para que a imagem possa aparece temos que definir um tamanho pra ela */
+    height: 20px;
+}
+#page-home main a strong{
+    flex: 1; /*Ainda não entendi */
+    color: white;
+    text-align: center;
+}
