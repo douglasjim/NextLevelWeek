@@ -1,0 +1,20 @@
+{
+  "name": "NextLevelWeek",
+  "version": "1.0.0",
+  "description": "Rocket_Starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasjim/NextLevelWeek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/douglasjim/NextLevelWeek/issues"
+  },
+  "homepage": "https://github.com/douglasjim/NextLevelWeek#readme"
+}
