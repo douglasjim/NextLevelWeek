@@ -2,19 +2,25 @@
   "name": "NextLevelWeek",
   "version": "1.0.0",
   "description": "Rocket_Starter",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/douglasjim/NextLevelWeek.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Douglas Santos de Sousa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/douglasjim/NextLevelWeek/issues"
   },
-  "homepage": "https://github.com/douglasjim/NextLevelWeek#readme"
+  "homepage": "https://github.com/douglasjim/NextLevelWeek#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
