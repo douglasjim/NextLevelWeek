@@ -22,13 +22,8 @@
         <div id="page-home">
 
             <div class="content">
-                <header> <!-- Devemos colocar essa tag para o header assim fica sematicamente correto e para os robos das pesquisas do google encontre mais rapido e facil nosso site -->
-                    <img src="extras-aula-1/icones/logo.svg" alt="Logomarca">
-                    <a href="create-point.html">
-                        <span> </span>
-                        <p>Cadastre um ponto de coleta</p>
-                    </a>
-                </header>
+                
+                {% include "partials/page-header.html" %} <!-- Todo codigo que ficava aqui esta em um outro lugar o caminho esta dentro dessa tag entre chaves la esta as tags do header assim nao ficamos repetindo o codigo tempo todo alem disso quando for mudar o reader irá mudar para todos que tenha esse tipo de chaves no html -->
                 
                 <main> <!-- tag que simboliza uma caixa, assim separando nossos conteudos por caixas -->
 
@@ -50,13 +45,13 @@
 
     <!-- Tags estilo MODAL !-->
 
-    <div id="modal" class="hide">
+    <div id="modal" class="hide"> <!-- colocar com chaves todo esse modal!!!!-->
         <div class="content">
             <div class="header">
                 <h1> Pontos de Coleta </h1>
                 <a href="#">Fechar </a>
             </div>
-            <form action="search-results.html">
+            <form action="/search">
                 <label for="search">Cidade</label>
                 <div class="search field">
                     <input type="text" name="search" placeholder="Digite a cidade">
@@ -67,8 +62,6 @@
             </form>
         </div>
     </div>
-
-
 
 
     <script src="scripts/index.js"></script>
